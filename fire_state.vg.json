@@ -35,6 +35,6 @@
       "mark":{"type":"text","text":"2019 was most damaging year overall","align":"center","baseline":"top","x":{"expr":"width/2"},"y":5,"fontSize":13,"color":"#328fa8"}}],
       
       "config":{"background":"#ffffff",
-        "title":{"fontSize":18,"font":"Helvetica","fontWeight":"bold","color":"#78350f","anchor":"start"}},
-        "axis":{"labelFontSize":14,"titleFontSize":16,"titleFontWeight":"bold"},
-        "view":{ "stroke":"transparent"}}
+        "title":{"fontSize":18,"font":"Helvetica","fontWeight":"bold","color":"#78350f","anchor":"start"},
+        "axis": {"labelFontSize": 14,"titleFontSize": 14,"titleFontWeight": "bold","titlePadding":15},
+        "view":{ "stroke":"transparent"}}}
