@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" />
+
+<title>Fire Damage in Australia</title>
+
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+<style>
+
+  .header_box {
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(2, 1, 1, 0.08);
+    padding:28px 36px 36px 36px;
+    background-color:#ffffff;
+    border-top:4px solid #114f2a;
+    margin-bottom:36px;}
+
+  .head_text {
+    box-shadow:0 2px 5px rgba(2, 1, 1, 0.08);
+    padding:24px 28px 28px 28px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    background-color:#ffffff;
+    border-top:4px solid #a94e08;
+    border-radius:10px;
+    min-height:420px;}
+
+  .intro_container {
+    justify-content:center;
+    align-items:flex-start;
+    gap:36px;
+    max-width:1000px;
+    display:flex;
+    margin:0 auto;}
+  
+  .intro_container p {
+    font-size:15px;
+    line-height:1.8em;
+    color:#333;
+    flex:1;
+    text-align:justify;}
+
+  body {
+    color:#313030;
+    font-family:"Lato","Open Sans",sans-serif;
+    background-color:#ffffff;
+    margin:36px;}
+
+  .chart_row {
+    gap:28px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    margin-bottom:28px;}
+
+  h1 {
+    text-align:center;
+    font-size:28px;
+    color:#114f2a;
+    margin-bottom:22px;}
+
+  h2 {
+    font-size:19px;
+    margin:0 0 8px 0;
+    color:#b45309;
+    text-align:center;}
+  
+  p.graph_text {
+    line-height:1.6em;
+    color:#444;
+    text-align:center;
+    max-width:90%;
+    font-size:15px;
+    margin:0 0 16px 0;}
+    
+  .chart_container {
+    justify-content:center;
+    width:100%;
+    display:flex;
+    margin-top:auto;}
+    
+  .chart_container > div {width:95%;}
+
+  footer {
+    border-top:1px solid #eee;
+    padding-top:18px;
+    font-size:13px;
+    text-align:center;
+    color:#655f5f;
+    margin-top:48px;}
+    
+</style>
+</head>
+
+<body>
+  
+  <div class="header_box">
+    <h1>The Cost of Australian Bushfires</h1>
+    
+    <div class="intro_container">
+
+      <p>
+        Australia's unique biosphere makes it highly susceptible to raging bushfires. Every year, large regions of land are lost to fire, threatening humans and nature. Understanding the patterns of fire damage is crucial in developing strategies for prevention and mitigation. This visualisation aims to raise awareness of these dangers, by visualising 2016-2021 data taken by DAFF (Department of Agriculture Fisheries and Forestry).
+      </p>
+      
+      <p>
+        First we explore the overall damages caused by fire, and the characteristics of these fires. Then we dive into a geographic breakdown, examining what areas are most susceptible to harmful fires. Finally, we further break down what types of land are most susceptible to fire damages. Ultimately we aim to tell the story of Australia's fires, and their impact. 
+      </p>
+    
+    </div>
+
+  </div>
+  
+  <div class="chart_row">
+    
+  <div class="head_text">
+
+    <h2>Area Lost To Fires In Australia</h2>
+      <p class="graph_text">
+        This line chart shows the land lost to fires over the year. Planned fires are deliberately started by authorities for enviromental purposes, wherease unplanned fires are out-of-control wildfires. Area lost peaked in 2019, due to unplanned fires. 
+      </p>
+      
+      
+      <div class="chart_container">
+      <div id="fire_line_aus">
+
+
+      </div>
+      </div>
+  </div>
+
+  <div class="head_text">
+
+    <h2>Proportion of Burnt Area that was Unplanned</h2>
+      <p class="graph_text">
+        The below chart analyses the proportion of fires which are unplanned (wild and dangerous) as opposed to those which are planned (healthy for humanity and nature). Authorities aim to minimise harmful unplanned fires.
+      </p>
+      
+      <div class="chart_container"
+      ><div id="fire_plan_per">
+
+
+      </div>
+      </div>
+  </div>
+  </div>
+  
+  
+  <div class="chart_row">
+    
+    <div class="head_text">
+
+    <h2>Fire Damage by State in 2019-2020 Season</h2>
+    
+      <p class="graph_text">
+        This map breaks down the impact of fire over the 2019-2020 dry season. As some areas of Australia are predisposed to wider ranging fires. The states of Northern Territory, Western Australia and Queensland suffer more. These states are closer to the equator. 
+      </p>
+      
+      <div class="chart_container">
+      <div id="fire_map">
+
+      </div>
+      </div>
+    
+  </div>
+  
+  <div class="head_text">
+    
+    <h2>Area Lost To Fires By State</h2>
+    
+      <p class="graph_text">
+        This bar chart compares burnt areas by state. Move the slider below to examine different years. Generally the Northern Territory and Queensland are hit hardest by fires most years. 2019 proved to be the most affected year by wildfires. 
+      </p>
+      
+      <div class="chart_container">
+      <div id="fire_bar_state">
+  
+      </div>
+      </div>
+    
+    </div>
+    </div>
+    
+  <div class="chart_row">
+    
+  <div class="head_text">
+    
+    <h2>Fire Damage Against State Size</h2>
+
+      <p class="graph_text">
+        The scatterplot compares state size against land lost to fire in 2019. This highlights how even regions which suffer less absolute fire damage, may still be deeply affected by fire. For example, Victoria is heavily affected for its size.
+      </p>
+      
+      <div class="chart_container">
+      <div id="fire_scatter">
+
+      </div>
+      </div>
+    
+    </div>
+
+  <div class="head_text">
+
+    <h2>Area Burnt by Land Type</h2>
+      <p class="graph_text">
+        The below rows show land type type, with color representing the percentage of unplanned fires. Private land had the most damage. Government and conservation land had high proportions of unplanned damage. This data was taken from 2016-2019
+      </p>
+      
+      <div class="chart_container">
+      <div id="land_chart">
+
+      </div>
+      </div>
+    
+    </div>
+    </div>
+
+
+<script type="text/javascript">
+
+vegaEmbed('#fire_line_aus','fire_aus.vg.json',{width:420,height:300});
+
+vegaEmbed('#fire_plan_per','fire_plan_per.vg.json',{width:450,height:350});
+
+vegaEmbed('#fire_map','fire_map.vg.json',{width:420,height:350});
+
+vegaEmbed('#fire_bar_state','fire_state.vg.json',{width:380,height:320});
+
+vegaEmbed('#fire_scatter','fire_scatter.vg.json',{width:390,height:400 });
+
+vegaEmbed('#land_chart','land_chart.vg.json',{width:420,height:320});
+
+</script>
+
+<footer>
+  <p> FIT3179 Data Visualisation Project 2 | Produced By Joel Pastor</p>
+</footer>
+
+</body>
+
+</html>
