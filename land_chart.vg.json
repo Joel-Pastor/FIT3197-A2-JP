@@ -11,14 +11,14 @@
 "encoding":{
   
   "y":{"field":"Land Type","type":"nominal","title":"Land Type","sort":"-x",
-    "axis":{"titlePadding":20,"labelPadding":8,"labelFontSize":14,"titleFontSize":16,"titleFontWeight":"bold"}},
+    "axis":{"titlePadding":20,"labelPadding":8,"labelFontSize":12,"titleFontSize":14,"titleFontWeight":"bold"}},
 
   "x":{"field":"Area Burnt","type":"quantitative","title":"Area Burnt (km squared)",
-    "axis":{"format":",","labelExpr":"format(datum.value, ',')","labelFlush":true,"labelFontSize":16,"titleFontSize":16,"titleFontWeight":"bold"}},
+    "axis":{"format":",","labelExpr":"format(datum.value, ',')","labelFlush":true,"labelFontSize":12,"titleFontSize":14,"titleFontWeight":"bold"}},
 
   "color":{"field":"Percent Unplanned","type":"quantitative","title":"Percent Unplanned","scale":{"scheme":"reds"},
 
-  "legend":{"orient":"bottom","titleFontSize":14,"titleFontWeight":"bold","labelFontSize":12,"format":".0f","labelExpr":"datum.label + '%'"}},
+  "legend":{"orient":"bottom","titleFontSize":10,"titleFontWeight":"bold","labelFontSize":10,"format":".0f","labelExpr":"datum.label + '%'"}},
   
   "tooltip":[
     {"field":"Land Type","title":"Land Tenure Type"},
@@ -27,6 +27,6 @@
 
 "config":{
   "view":{"stroke":"transparent"},
-  "axis":{"labelFontSize":12,"titleFontSize":14,"titleFontWeight":"bold"},
-  "legend":{"orient":"bottom","titleFontSize":14,"titleFontWeight":"bold","labelFontSize":14},
+  "axis":{"labelFontSize":12,"titleFontSize":12,"titleFontWeight":"bold"},
+  "legend":{"orient":"bottom","titleFontSize":12,"titleFontWeight":"bold","labelFontSize":14},
   "background":"white"}}
