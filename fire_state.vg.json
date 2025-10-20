@@ -36,5 +36,5 @@
       
       "config":{"background":"#ffffff",
         "title":{"fontSize":18,"font":"Helvetica","fontWeight":"bold","color":"#78350f","anchor":"start"}},
-        "axis":{"labelFontSize":12,"titleFontSize":14,"titleFontWeight":"bold"},
+        "axis":{"labelFontSize":14,"titleFontSize":16,"titleFontWeight":"bold"},
         "view":{ "stroke":"transparent"}}
