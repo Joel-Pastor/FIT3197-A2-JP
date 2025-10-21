@@ -18,7 +18,7 @@
 
   "color":{"field":"Percent Unplanned","type":"quantitative","title":"Percent Unplanned","scale":{"scheme":"reds"},
 
-  "legend":{"orient":"bottom","titleFontSize":10,"titleFontWeight":"bold","labelFontSize":10,"format":".0f","labelExpr":"datum.label + '%'"}},
+  "legend":{"orient":"bottom","titleFontSize":11,"titleFontWeight":"bold","labelFontSize":10,"format":".0f","labelExpr":"datum.label + '%'"}},
   
   "tooltip":[
     {"field":"Land Type","title":"Land Tenure Type"},
